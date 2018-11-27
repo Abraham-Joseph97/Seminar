@@ -1,0 +1,936 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang16393{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset161 Calibri;}{\f3\fnil\fcharset1 Cambria Math;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.17134}{\*\mmathPr\mmathFont3\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\\documentclass[hidelinks, 12pt]\{report\}\par
+\\usepackage\{graphicx\}\par
+\\usepackage\{marginnote\}\par
+\\usepackage\{amsmath\}\par
+\\usepackage\{amssymb\}\par
+\\usepackage\{geometry\}\par
+\\usepackage[document]\{ragged2e\}\par
+\\usepackage[utf8]\{inputenc\}\par
+\\usepackage[english]\{babel\}\par
+\\usepackage\{fancyhdr\}\par
+\\usepackage\{float\}\par
+%\\usepackage\{floatrow\}\par
+\\usepackage\{caption\}\par
+%\\usepackage\{calc\}\par
+\\usepackage\{chngcntr\}\par
+\\usepackage[caption = false]\{subfig\}\par
+\\usepackage[subfigure]\{tocloft\}\par
+\\newlength\{\\mylen\}\par
+\\usepackage[font=footnotesize,labelfont=bf]\{caption\}\par
+%\\usepackage\{times\}\par
+\\usepackage[table]\{xcolor\}\par
+\\usepackage[intoc]\{nomencl\}\par
+\\usepackage\{setspace\}\par
+\\usepackage\{tocloft\}\par
+\par
+%\\usepackage\{nomencl\}\par
+%\\let\\abbrev\\nomenclature\par
+%\\makenomenclature \par
+%\\newcommand\{\\Abkuerzung\}\{\par
+%\\printnomenclature\par
+%\\newpage\par
+%\}\par
+\par
+\par
+\\usepackage\{array\}\par
+\\usepackage\{hyperref\}\par
+\\hypersetup\{\par
+    colorlinks=false,\par
+    linkcolor=blue,\par
+    filecolor=green,      \par
+    urlcolor=cyan,\par
+    citecolor=blue,\par
+\}\par
+\\urlstyle\{same\}\par
+\\usepackage\{bookmark\}\par
+\\renewcommand\{\\cftfigpresnum\}\{\\figurename\\enspace\}\par
+\\renewcommand\{\\cftfigaftersnum\}\{:\}\par
+\\settowidth\{\\mylen\}\{\\cftfigaftersnum\\cftfigpresnum\}\par
+\\addtolength\{\\cftfignumwidth\}\{\\mylen\}\par
+\\counterwithin\{figure\}\{section\}\par
+\par
+\\renewcommand\{\\cfttabpresnum\}\{\\tablename\\enspace\}\par
+\\renewcommand\{\\cfttabaftersnum\}\{:\}\par
+\\settowidth\{\\mylen\}\{\\cfttabaftersnum\\cftfigpresnum\}\par
+\\addtolength\{\\cfttabnumwidth\}\{\\mylen\}\par
+\\counterwithin\{table\}\{section\}\par
+\par
+\\renewcommand\{\\labelenumi\}\{(\\roman\{enumi\})\}\par
+\par
+\\geometry\{margin=1in\}\par
+\par
+\par
+\\usepackage\{titlesec\}\par
+\\titleformat\{\\chapter\}[display]\par
+\{\\normalfont %\par
+    \\Huge % %change this size to your needs for the first line\par
+    \\bfseries\}\{\\chaptertitlename\\ \\thechapter\}\{20pt\}\{%\par
+    \\huge\} %change this size to your needs for the second line\par
+ \par
+\par
+\par
+\\fancyhf\{\}\par
+\\fancyhead[LE,LO]\{\\footnotesize\{\}\}\par
+\\fancyhead[RE,RO]\{\\footnotesize\{Craniofacial Superimposition\}\}\par
+\\fancyfoot[LE,LO]\{\\footnotesize\{Govt. Model Engineering College\}\}\par
+\\fancyfoot[RE,RO]\{\\footnotesize\\thepage\}\par
+\\renewcommand\{\\headrulewidth\}\{1pt\}\par
+\\renewcommand\{\\footrulewidth\}\{1pt\}\par
+%\\renewcommand\{\\familydefault\}\{\\rmdefault\}\par
+\\newcommand\{\\Rnum\}[1]\{\\uppercase\\expandafter\{\\romannumeral#1\}\}\par
+\\newcommand\{\\rnum\}[1]\{\\romannumeral#1\\relax\}\par
+%\\setcounter\{secnumdepth\}\{4\}\par
+%\\setcounter\{tocdepth\}\{4\}\par
+\par
+%\\begin\{document\}\par
+\par
+\\documentclass[11pt]\{article\}\par
+\par
+\\usepackage[utf8]\{inputenc\} % Required for inputting international characters\par
+\\usepackage[T1]\{fontenc\} % Output font encoding for international characters\par
+\par
+\\usepackage\{mathpazo\} % Palatino font\par
+\par
+\\usepackage\{eso-pic\}\par
+\\newcommand\\BackgroundPic\{%\par
+\\put(0,0)\{%\par
+\\parbox[b][\\paperheight]\{\\paperwidth\}\{%\par
+\\vfill\par
+\\centering\par
+\\includegraphics[width=\\paperwidth,height=\\paperheight,%\par
+keepaspectratio]\{Back.jpg\}%\par
+\\vfill\par
+\}\}\}\par
+\par
+\\begin\{document\}\par
+\par
+\\AddToShipoutPicture*\{\\BackgroundPic\}\par
+\\ClearShipoutPicture\par
+%----------------------------------------------------------------------------------------\par
+%\tab TITLE PAGE\par
+%----------------------------------------------------------------------------------------\par
+\par
+\\begin\{titlepage\} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1\par
+\\center % Centre everything on the page\par
+\tab\par
+\tab %------------------------------------------------\par
+\tab %\tab Headings\par
+\tab %------------------------------------------------\par
+\{\\huge\\bfseries Craniofacial Superimposition\}\\\\[0.4cm] % Title of your document\par
+\\textsc\{\\huge Seminar Report\}\\\\[0.4cm] % Major heading such as course name\tab\par
+\\large Submitted in partial fulfillment for the award of the degree\\\\[0.1cm] \\large of\\\\[0.2cm]\par
+\\textbf\{\\LARGE BACHELOR OF TECHNOLOGY\}\\\\[0.1cm]\par
+\\textbf\{\\large IN\}\\\\[0.1cm]\par
+\\textbf\{\\LARGE ELECTRONICS AND COMMUNICATION\\\\[0.2cm] ENGINEERING\}\\\\[0.4cm]\par
+\\textsc\{Submitted by\}\\\\[0.1in]\par
+\tab\par
+\\Large\\centering\{Abraham Joseph\}\\\\\par
+\\includegraphics[height=5cm,width=5cm]\{logo.png\}\\\\\par
+\tab\par
+\\textsc\{\\Large Department of Electronics and Communication Engineering\}\\\\[0.2cm] % Minor heading such as course title\par
+\\textsc\{\\Large Govt. Model Engineering College\}\\\\[0.2cm] % Main heading such as the name of your university/college\par
+\\textsc\{\\Large Thrikkakara, Cochin - 682 021\}\\\\[0.2cm] % Main heading such as the name of your university/college\par
+\\textsc\{\\Large APJ Abdul Kalam Technological University\}\\\\ % Main heading such as the name of your university/college\par
+\\textsc\{\\Large November 2018\} % Main heading such as the name of your university/college\par
+\par
+\\end\{titlepage\}\par
+\par
+\\pagenumbering\{none\}\par
+\\centering\par
+\\section*\{\\centering\{Bonafide Certificate\}\}\par
+\\vspace\{1cm\}\par
+\\includegraphics[height=5cm,width=5cm]\{logo\}\par
+\par
+\\begin\{center\}\par
+MODEL ENGINEERING COLLEGE\\\\\par
+\\vspace\{0.5cm\}\par
+THRIKKAKARA, KOCHI-21\\\\\par
+\\vspace\{0.5cm\}\par
+DEPARTMENT OF ELECTRONICS AND COMMUNICATION \\\\\par
+\\vspace\{0.5cm\}\par
+APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY \\\\\par
+\\vspace\{1cm\}\par
+\\textit\{Bonafide Certificate\}\par
+{{\field{\*\fldinst{HYPERLINK "\\\\\\\\This is to Certify that the Seminar Report entitled\\\\\\\\"}}{\fldrslt{\\\\This is to Certify that the Seminar Report entitled\\\\\ul0\cf0}}}}\f0\fs22\par
+\\vspace\{0.5cm\}\par
+\\textbf\{Craniofacial Superimposition\} \par
+\\\\\par
+\\vspace\{0.5cm\}\par
+Submitted by\\\\\par
+\\vspace\{0.2cm\}\par
+Abraham Joseph\\\\\par
+\\vspace\{0.2cm\}\par
+is a bonafide account of his work done under our supervision. \\\\\par
+\\end\{center\}\par
+\par
+\\vspace\{2cm\}\par
+\\begin\{minipage\}[t]\{10cm\}\par
+\\flushleft \\textbf\{Seminar Co-ordinator\}\\\\\par
+Smt. Sheeba P S\\\\\par
+Associate Professor\\\\\par
+Dept. of Electronics and\\\\\par
+Communication Engineering\par
+\\end\{minipage\}\par
+\\vspace\{2cm\}\par
+\\begin\{minipage\}[t]\{6cm\}\par
+\\flushleft \\textbf\{Seminar Guide\}\\\\\par
+Mr.Vasanth Kumar\\\\\par
+Assistant Professor\\\\\par
+Dept. of Electronics and\\\\\par
+Communication Engineering\par
+\\end\{minipage\}\par
+%\\begin\{minipage\}[t]\{5cm\}\par
+%\\flushleft Head of Department\\\\\par
+%Mr. Pradeep M\\\\\par
+%Associate Professor\\\\\par
+%\\end\{minipage\}\par
+\par
+%\\addcontentsline\{toc\}\{chapter\}\{Abstract\}\par
+\\chapter*\{\\centering Abstract\}\par
+\\justify\par
+\\textit\{\par
+Craniofacial superimposition involves the process of overlaying a skull with a number of ante-mortem images of an individual and the analysis of their morphological correspondence. Within the craniofacial superimposition process,\par
+the skull-face overlay stage focuses on achieving the best possible overlay of the skull and a single ante-mortem image of a missing person. This technique has been commonly applied following a nonautomatic trial-and-error approach. Automatic skull-face overlay methods have been developed obtaining promising\par
+results. This paper presents two new variants that are an extension of existing 3-D\f1\endash 2-D methods to automatically superimpose a skull 3-D model on a facial photograph. It has modeled the imprecision related to the facial soft tissue depth between corresponding pairs of cranial and facial landmarks\par
+which typically guide the automatic approaches. As an illustration of the model\rquote s performance, the soft tissue distances associated to studies for Mediterranean population have been considered for dealing with this landmark matching uncertainty. Hence, it directly incorporates the corresponding landmark\par
+spatial relationships within the automatic skull-face overlay procedure. It has tested the performance of our proposal on 18 skull-face overlay instances from a ground truth data set obtaining valuable results. The current proposal is thus the first automatic skull-face overlay method evaluated in a reliable and unbiased way.\}\\\\\par
+\par
+\\textit\{\\textbf\{keyword\}\}- \par
+Forensic anthropology, craniofacial identification, craniofacial superimposition, 3D-2D skull-face overlay, soft tissues, fuzzy sets and distances.\par
+%\\end\{keyword\}\par
+%\\sep%\par
+\par
+\\pagebreak\par
+\\setcounter\{page\}\{1\}\par
+\\pagenumbering\{roman\}\par
+\\justify\par
+%\\onehalfspacing\par
+\\begin\{spacing\}\{0.8\}\par
+\\renewcommand\{\\contentsname\}\{Table of Contents\}\par
+\\pdfbookmark\{\\contentsname\}\{Table of Contents\}\par
+\\tableofcontents\par
+\\end\{spacing\}\par
+\\pagebreak\par
+%line spacing\par
+\\addcontentsline\{toc\}\{chapter\}\{List of Figures\}\par
+\\listoffigures \par
+\\pagebreak\par
+\par
+\\newcommand\{\\listequationsname\}\{List of Equations\}\par
+\\newlistof\{myequations\}\{equ\}\{\\listequationsname\}\par
+\\newcommand\{\\myequations\}[1]\{%\par
+\\addcontentsline\{equ\}\{myequations\}\{\\protect\\numberline\{\\theequation\}#1\}\\par\}\par
+\par
+\\xpretocmd\{\\listofmyequations\}\{\\addcontentsline\{toc\}\{chapter\}\{\\listequationsname\}\}\{\}\{\}\par
+\\pagebreak\par
+\par
+\par
+%\\addcontentsline\{toc\}\{chapter\}\{List of Tables\}\par
+%\\listoftables\par
+%\\pagebreak\par
+\par
+\par
+\par
+\\addcontentsline\{toc\}\{chapter\}\{Acknowledgement\}\par
+\\section*\{Acknowledgement\}\par
+\\justify\par
+On the recollection of so many great favors and blessings, I offer my sincere thanks to the Almighty, the Creator and Preserver.\\\\\par
+%\\vspace\{1cm\}\par
+\par
+I express my heartfelt gratitude to Principal \\textbf\{Prof. (Dr.) Vinu Thomas\}, and \\textbf\{Prof. (Dr.) Laila D\}, HOD of Electronics and Communication Engineering, Govt. Model Engineering College, Thrikkakara for providing me with excellent library facilities. \\\\\par
+\par
+I sincerely thank my seminar guide \\textbf\{Mr. Vasanth Kumar s\}, Assistant Professor of Department of Electronics and Communication Engineering, for her timely advice and suggestions.\\\\\par
+\par
+I am thankful to my seminar coordinator \\textbf\{Smt. Sheeba P S\}, Assistant Professor, Department of Electronics and Communication Engineering for the full-fledged support and guidance.  \\\\\par
+\par
+Last but not the least I am thankful to one and all of the Department of Electronics and Communication Engineering and the whole library staff for their co-operation and active involvement.\par
+I also thank my colleagues for their support.\par
+\\hbox\{\} \\newpage \par
+\\pagenumbering\{arabic\} \par
+\\pagestyle\{fancy\}\par
+\\chapter\{Introduction\}\par
+\\fancyhf\{\}\par
+\\fancyhead[r]\{%\par
+   % We want italics\par
+   \\itshape\par
+   % The chapter number only if it's greater than 0\par
+\\footnotesize\{\\chaptermark\}\par
+   % The chapter title\par
+   \\leftmark\}\par
+\\fancyfoot[LE,LO]\{\\footnotesize\{Govt. Model Engineering College\}\}\par
+\\fancyfoot[RE,RO]\{\\footnotesize\\thepage\}\par
+\\justify\par
+The techniques used to identify a missing person from\par
+skeletal information have been under continuous\par
+investigation within forensic anthropology.\par
+Craniofacial superimposition (CFS), one of the approaches\par
+in craniofacial identification, involves superimposing\par
+a skull onto a number of ante-mortem images of an individual\par
+and the analysis of their morphological correspondence.\par
+Three consecutive stages for the whole CFS process have\par
+been distinguished in : 1) Acquisition and processing of the\par
+skull and the ante-mortem facial photographs, together with\par
+the location of anatomical landmarks on the skull and the face;\par
+2) Skull-face overlay (SFO), which focuses on achieving the\par
+best possible superimposition of a skull (or a skull 3D model)\par
+and a single ante-mortem image of a missing person. This\par
+process is iteratively repeated for each available photograph,\par
+obtaining different overlays. Skull-face overlay thus refers\par
+to what traditionally has been known as the adjustment of\par
+the skull size and its orientation with respect to the facial\par
+photograph . It is the most time consuming stage of the\par
+whole CFS procedure. 3) Decision making where the degree\par
+of support shows that the skull and the available photograph\par
+belong to the same person or not (exclusion). This task requires\par
+a thorough analysis of the face/skull correspondence provided\par
+by SFO (second stage) to determine if the skull and the\par
+face actually belong to the same person. Currently, decision\par
+making in CFS must be manually taken by the human expert,\par
+a forensic anthropologist. This decision is guided by different\par
+criteria involving the relationship between the skull and the\par
+face: the morphological correlation, the matching between the\par
+corresponding landmarks according to the soft tissue depth\par
+and the consistency between asymmetries.\par
+An important limitation of the CFS technique is the absence\par
+of a commonly accepted methodology.1 Experts try to solve the CFS problem by applying a specific strategy which uses\par
+their knowledge and the available technologies. During the\par
+SFO stage, the focus of this contribution, most forensic anthropologists\par
+follow a trial-and-error approach until they attain a\par
+good enough superimposition. The appropriate projection of\par
+the skull onto the facial photograph is a very challenging\par
+and time-consuming part of the CFS technique. This task\par
+involves the estimation of the best correspondence and it\par
+can take hours to arrive at the best possible fit.\par
+In addition, an inherent uncertainty exists because of overlaying\par
+two different \ldblquote objects\rdblquote  (a skull and a face) . Hence,\par
+a systematic and automatic SFO method is a real need in\par
+forensic anthropology.\par
+Computational methods in the fields of computer\par
+vision (CV) and soft computing (SC) can be extremely useful\par
+of this proposal. Computer vision includes techniques for\par
+processing, analyzing, segmenting and registering image data\par
+in an automatic way. Within CV, image registration (IR)\par
+aims to find a geometric transformation that overlays\par
+two images taken under different conditions (at different\par
+times, from different viewpoints, and/or by different\par
+sensors). Meanwhile, SC aims to design intelligent\par
+systems that process uncertain, imprecise and incomplete\par
+information. Two of the main SC techniques are fuzzy\par
+logic (FL) and evolutionary algorithms (EAs).\par
+The former extends classical logic to provide a conceptual\par
+framework of knowledge representation under imprecision\par
+and the consequent uncertainty. The latter combines powerful\par
+bio-inspired search and optimization tools to automate\par
+problem solving in areas such as modeling, simulation or\par
+global optimization. Specifically, fuzzy sets have largely\par
+demonstrated their capability to deal with vagueness and\par
+imprecise information.\par
+The previous work tackles SFO automatically using EAs\par
+and fuzzy sets. These approaches are based\par
+on overlaying a skull 3D model on a facial photograph by\par
+minimizing the distance among pairs of landmarks as well\par
+as handling the imprecision due to the facial landmarks\rquote\par
+location. This minimization process involves the\par
+search for the specific projection of the skull 3D model that\par
+reduces all the distances between every pair of corresponding\par
+landmarks as much as possible. This is a good approximation\par
+to deal with the problem, which provides reasonable results but\par
+it is not anatomically correct. In fact, the anatomical distance\par
+between a cranial landmark and its corresponding facial point\par
+(soft tissue depth) is not considered. In reality, the thickness\par
+of the facial soft tissue differs for each corresponding pair of\par
+landmarks, varies among individuals and produces a mismatch\par
+among cranial and facial landmarks. Furthermore,\par
+another drawback of this proposals is that they have only been\par
+validated in a subjective way, based on the visual evaluation of\par
+the superimposition results by forensic experts. This is due to\par
+the lack of an objective assessment methodology in the area.\par
+In this contribution, our proposal deals with the automation\par
+of the SFO task that is focused on the projection of a 3D skull\par
+model over a 2D photograph. It presents an automatic 3D-2D\par
+SFO method which considers the imprecision related to the\par
+matching of landmarks in the skull and face. Thanks to fuzzy\par
+sets, it has modeled the soft tissue thickness between\par
+pairs of cranial and facial landmarks. This novel proposal uses\par
+the same optimization mechanism employed before\par
+but it changes the formulation of the problem to directly\par
+incorporate the spatial relationships between corresponding\par
+landmarks. Unlike traditional SFO approaches locating tissue\par
+depth markers on the physical or the 3D model skull\par
+this proposal allows us to incorporate any soft tissue study\par
+easily.\par
+In addition, it has performed an objective and quantitative\par
+evaluation of the SFO results. We included the soft\par
+tissue depth measurements of specific studies within\par
+the SFO task. It has tested the performance of this approach\par
+on 18 SFO problem instances that belong to the first and\par
+unique ground truth dataset. This allows to evaluate\par
+this automatic SFO method following an unbiased and reliable\par
+procedure. To my knowledge, the current proposal is the\par
+first automatic SFO procedure that incorporates forensic\par
+studies of inter-landmark distances and considers a ground\par
+truth dataset to validate the results.\par
+The paper is organized as follows. \par
+%\\begin\{figure\}[H]\par
+%\\centering\par
+%\\includegraphics[width=15cm,height=5cm]\{Block.png\}\par
+%\\caption[Method Overview]\{Method Overview\}\par
+%\\label\{Method Overview\}\par
+%\\end\{figure\}\par
+\\chapter\{Background\}\par
+\\section\{Craniofacial Superimposition\}\par
+\\fancyhf\{\}\par
+\\fancyhead[r]\{%\par
+   % We want italics\par
+   \\itshape\par
+   % The chapter number only if it's greater than 0\par
+\\footnotesize\{\\chaptermark\}\par
+   % The chapter title\par
+   \\leftmark\}\par
+\\fancyfoot[LE,LO]\{\\footnotesize\{Govt. Model Engineering College\}\}\par
+\\fancyfoot[RE,RO]\{\\footnotesize\\thepage\}\par
+\\justify\par
+Craniofacial superimposition is one of the approaches\par
+in craniofacial identification. It involves the superimposition\par
+of a skull with a number of ante-mortem images\par
+of an individual and the analysis of their morphological\par
+correspondence. Since the first documented use of CFS for\par
+identification purposes, the technique has been under\par
+continuous improvement. Although the foundations of the CFS\par
+method were laid at the end of the ninetieth century\par
+the associated procedures evolved as new technology became\par
+available. Therefore, three different main approaches have\par
+been developed: photographic superimposition (developed in\par
+the mid 1930s), video superimposition (widely used since the\par
+second half of the 1970s) and computer-aided superimposition\par
+(introduced in the second half of the 1980s).\par
+The role of computerized systems in CFS is very important\par
+nowadays. Thus, special attention has been given to them in\par
+the more recent surveys in the field. In particular,\par
+they highlight the importance of stating the difference between\par
+non automatic and automatic computer-aided methods. Among\par
+the latter group, a reduced number of proposals deal with\par
+the same problem tackled in this manuscript: the SFO task.\par
+They obtain unbiased results and drastically reduce the time\par
+taken for SFO. These proposals are based either on photograph\par
+to photograph comparison or on skull 3D model to\par
+photograph comparison.\par
+\\section\{Skull-Face overlay as a computer vision problem\}\par
+\\justify\par
+%The existing underwater dehazing techniques can be grouped in several classes. \par
+%\\begin\{itemize\}\par
+Skull-face overlay requires positioning the skull in the same\par
+pose as the face in the photograph. From a purely CV point\par
+of view, the ante-mortem photograph is the result of the 2D projection of a real (3D) scene that was acquired by a\par
+particular (unknown) camera. In such a scene, the living\par
+person was somewhere inside the camera\rquote s field of view in a\par
+given pose.\par
+The most natural way to deal with the SFO problem is\par
+to replicate this original scenario. To do so, a 3D model of\par
+the skull must be used. Current 3D scanners provide skull\par
+3D models with a precision of less than one millimeter in\par
+a few minutes. These models can be properly handled\par
+using the computer, making the automation of the SFO task\par
+easier. Once the skull 3D model has been obtained, the goal\par
+is to adjust its size and its orientation with respect to the head\par
+in the photograph. In addition, the specific characteristics of\par
+the camera must also be replicated to reproduce the original\par
+situation as much as possible.\par
+First, the skull 3D model is positioned in the camera\par
+coordinate system through geometric transformations,\par
+i.e., translation, rotation and scaling, which corresponds to\par
+the adjustment of the skull size and its orientation at the\par
+same angle as the face in the photograph. Then a\par
+perspective projection of the skull 3D model is placed onto\par
+the facial photograph.\par
+Hence, a 3D-2D IR process where these unknown parameters\par
+are estimated seems to be the most appropriate formulation\par
+to automate SFO. In fact, that process directly replicates the\par
+original scenario in which the photograph was taken.\par
+\par
+\\section\{Automatic Skull-Face Overlay Procedure\}\par
+\\justify\par
+The 3D-2D IR approach is guided by the cranial and facial\par
+landmarks previously assigned by a forensic expert to the skull\par
+3D model and the facial photograph.\par
+Hence, given two sets of cranial and facial landmarks,\par
+the process has\par
+to solve a system of equations with 12 unknowns [15]: the\par
+direction of the rotation axis \par
+\\begin\{equation\}\par
+  d = (d_x , d_y , d_z),\par
+\\end\{equation\}\'02 \par
+\\myequations\{ Direction of rotation\}\par
+the location\par
+of the rotation axis with respect to the center of coordinates.\par
+\\begin\{equation\}\par
+    r = (r_x , r_y , r_z),\par
+\\end\{equation\}\par
+\\myequations\{ Location of axis\}\par
+ the rotation angle \f2\lang1032\'e8, the factor s that scales\par
+the skull 3D model using the face in the photograph, the\par
+translation \'02\par
+\\begin\{equation\}\par
+    t = (t_x , t_y , t_z)\par
+\\end\{equation\}\par
+\\myequations\{ Translation\}\par
+that places the origin of the skull\par
+3D model in front of the camera to replicate the moment of\par
+the photograph and the angle of view \'f6. These parameters\par
+determine the geometric transformation f that projects every\par
+cranial landmark \\begin\{equation\}\par
+    cl^i\par
+\\end\{equation\}\par
+\\myequations\{ Cranial landmark\}\par
+of the skull 3D model onto its corresponding\par
+facial landmark \\begin\{equation\}\par
+    fl^i\par
+\\end\{equation\} \par
+\\myequations\{ Facial landmark\}\par
+of the photograph:\par
+\par
+\par
+\\begin\{equation\}\par
+F= C*R*S*T*P\par
+\\end\{equation\}\par
+\\myequations\{ Fitness function\}\par
+The rotation matrix R turns the skull to the same pose as the\par
+head in the photograph. S, T, and P are scaling, translation and\par
+perspective projection matrices respectively. A complete\par
+description of the matrices of the above equation is detailed in.\par
+Using the cranial and facial landmarks, an EA iteratively\par
+searches for the best geometric transformation f, i.e., the\par
+optimal combination of the 12 parameters that minimizes the\par
+mean error (ME) fitness function:\par
+\\begin\{equation\}\par
+ME= (\\sum_\{i=1\}^\{i=N\}d(f(cl^i),fl^i))/N\par
+\\end\{equation\}\par
+\\myequations\{ Mean error\}\par
+where \par
+\\begin\{equation\}\par
+    cl^i\par
+\\end\{equation\}\par
+\\myequations\{ Cranial landmark\}is the 3D cranial landmark, \\begin\{equation\}\par
+    fl^i \par
+\\end\{equation\}\par
+\\myequations\{ Facial landmark\}is the 2D facial\par
+landmark, f is the geometric transformation, f(cli ) represents\par
+the 2D position of the 3D cranial landmark when projected\par
+onto the photograph, d is the 2D Euclidean distance, and N is\par
+the number of landmarks placed by the expert.\par
+\\section\{Modeling the Uncertainty Related to the\par
+Location of Facial Landmarks\}\par
+\\justify\par
+\\begin\{figure\}[H]\par
+\\centering\par
+\\includegraphics[width=8cm,height=8cm]\{capture.PNG\}\par
+\\caption[Imprecise location of facial landmarks (left) and representation of\par
+a fuzzy landmark with fuzzy sets (right)]\{Imprecise location of facial landmarks (left) and representation of\par
+a fuzzy landmark with fuzzy sets (right).\\cite\{MP\}\}\par
+\\label\{Imprecise location of facial landmarks (left) and representation of\par
+a fuzzy landmark with fuzzy sets (right).\}\par
+\\end\{figure\}\par
+The uncertainty related to the location of facial landmarks\par
+refers to the difficult task of placing landmarks on a photograph. Among other reasons, the definition of many\par
+anthropometric landmarks is imprecise in nature.\par
+Using precise landmarks, forensic anthropologists can only\par
+place the facial landmarks that they clearly identify in the\par
+facial photograph. The fuzzy approach developed in [9] allows\par
+experts to enclose a region where the facial landmark is\par
+placed without any doubt by using variable-size ellipses (fuzzy\par
+landmarks) instead of locating a precise point as usual. The\par
+number of landmarks placed by the expert can thus increase\par
+when these landmarks are employed. This leads to a better\par
+description of the skull-face correspondence thanks to the new\par
+pairs of cranial points and fuzzy landmarks in the face. The\par
+performance of the automatic SFO method is thus improved.\par
+As a consequence of handling these fuzzy landmarks,\par
+modeled as bi-dimensional fuzzy sets the computation\par
+of the distances between the corresponding cranial and\par
+facial landmarks in equation of ME is affected as follows:\par
+\\begin\{equation\}\par
+    d'(x,F)=(\\sum_\{k=1\}^\{i=m\}d(x,F_k)*a_k)/\\sum_\{k=1\}^\{k=m\}a_k\par
+\\end\{equation\}\par
+\\myequations\{ Distance function\}\par
+where x is a precise point, Fk is the kth element (pixel) of the\par
+fuzzy landmark F , d is the 2D Euclidean distance, \'e1k is the\par
+membership value of Fk, and m is the number of elements of\par
+the fuzzy landmark F .\par
+The interested reader is referred to for a more in-depth\par
+explanation and an example of the calculation of the distance\par
+between a point and a fuzzy landmark.\par
+\par
+Considering this latter distance , the definition of the\par
+EA fitness function is modified as follows:\par
+\\begin\{equation\}\par
+    fuzzyME=(\\sum_\{i=1\}^\{i=N\}d'(f(cl^i),F^i))/N\par
+\\end\{equation\}\par
+\\myequations\{ Fuzzy mean error\}\par
+where f(cli ) represents the 2D position of the 3D cranial\par
+landmark when projected onto the photograph, F i represents\par
+the fuzzy landmark, and d\'03( f (cli ), F i ) is the distance between\par
+a point and a fuzzy landmark, and the remaining\par
+parameters\par
+\\chapter\{Incorporating facial soft tissue modelling to the skull face overlay method\}\par
+\\fancyhf\{\}\par
+\\fancyhead[r]\{%\par
+   % We want italics\par
+   \\itshape\par
+   % The chapter number only if it's greater than 0\par
+\\footnotesize\{\\chaptermark\}\par
+   % The chapter title\par
+   \\leftmark\}\par
+\\fancyfoot[LE,LO]\{\\footnotesize\{Govt. Model Engineering College\}\}\par
+\\fancyfoot[RE,RO]\{\\footnotesize\\thepage\}\par
+\\justify\par
+Facial soft tissue depth varies for each landmark correspondence\par
+and for different groups of people. Some facial\par
+and cranial landmarks show a very close relationship as\par
+glabella, dacryon and frontotemporale. Meanwhile, others do\par
+not exactly overlap because of varying thicknesses in the soft\par
+tissue between them, e.g. gnathion, zygion and alare . This\par
+variability has been widely studied in many populations and\par
+considering different age and gender subgroups .\par
+The proposal goes beyond the use of tissue depth\par
+markers as it directly incorporates the corresponding\par
+landmark spatial relationships and distances within the automatic\par
+SFO procedure . To do this, model the\par
+minimum (min), mean (mean) and maximum (max) distances\par
+between a pair of cranial and facial landmarks using fuzzy sets\par
+(what is defined as landmark matching uncertainty). These\par
+distances are obtained from any study looking at the specific\par
+population group considered.\par
+In this section, presents two alternative approaches that\par
+deal with the landmark matching imprecision in SFO.\par
+\\begin\{figure\}[H]\par
+\\centering\par
+\\includegraphics[width=8cm,height=10cm]\{Capture1.PNG\}\par
+\\caption[Mean soft tissue depths (in mm) and spatial relationship between\par
+cranial and facial landmarks]\{Mean soft tissue depths (in mm) and spatial relationship between\par
+cranial and facial landmarks\\cite\{MP\}\}\par
+\\label\{Imprecise location of facial landmarks (left) and representation of\par
+a fuzzy landmark with fuzzy sets (right).\}\par
+\\end\{figure\}\par
+\par
+\par
+\\section\{Modeling the Landmark Matching Uncertainty\par
+Using Spheres\}\par
+The first approach consists of building a fuzzy set whose\par
+center is the 3D cranial landmark with a membership degree\par
+of zero. The rest of the points are calculated adding the\par
+positive and negative values of the min, mean and max\par
+%\\begin\{equation\}\par
+%S=(I+N(I-G*I))/2\par
+%\\end\{equation\}\par
+\\begin\{figure\}[H]\par
+\\centering\par
+\\includegraphics[width=10cm,height=8cm]\{Capture.PNG\}\par
+\\caption[Graphical representation of one of the dimensions of the 3D fuzzy\par
+set \f1\'98Bp for modeling the landmark matching uncertainty using a sphere. The\par
+other two dimensions are modeled in a homologous way.]\{Graphical representation of one of the dimensions of the 3D fuzzy\par
+set \'98Bp for modeling the landmark matching uncertainty using a sphere. The\par
+other two dimensions are modeled in a homologous way.\\cite\{MP\}\}\par
+\\label\{Graphical representation of one of the dimensions of the 3D fuzzy\par
+set \'98Bp for modeling the landmark matching uncertainty using a sphere. The\par
+other two dimensions are modeled in a homologous way.\}\par
+\\end\{figure\}\par
+distances to the 3D cranial landmark position along the\par
+three axes (X, Y and Z). We thus define a 3D volume\par
+(sphere) in the space where each facial landmark is expected\par
+to be located according to a particular soft tissue depth study.\par
+A triangular fuzzy set is chosen to define the masks\par
+for handling the landmark matching uncertainty. This choice\par
+is motivated by the large amount of literature available on\par
+the topic. Although different membership function shapes\par
+can be considered, both piece-wise (e.g. trapezoidal-shaped)\par
+and continuous (e.g. Gaussian), piece-wise triangular fuzzy\par
+membership functions are simpler and easier to handle.\par
+In addition, some works have proven that a linear piecewise\par
+fuzzy membership function can approximate a continuous\par
+function to the desired degree, achieving similar results.\par
+Formally, this handles the landmark matching uncertainty\par
+using 3D masks represented as a matrix M with mx \f0\lang1033\'d7my \'d7mz\par
+points. These masks are defined by three triangular fuzzy\par
+sets \f1\'98B x , \'98By, and B z , which model the approximate vertical,\par
+horizontal, and depth position of the sphere that represents\par
+the place of each facial landmark in relation with its cranial\par
+counterpart. They thus become 3D fuzzy sets, where each\par
+triangular fuzzy set \'98B p, with p \f3\u8712?\f0  \{x, y, z\}, is defined\par
+by its center c \f3\u8712?\f0  \'03cx , cy , cz\'04 (the 3D coordinates of the\par
+cranial landmark) and the min, mean, and max distances as\par
+follows:\par
+\\begin\{equation\}\par
+               B_p=1-(|p-c+mean|)/(max-mean), if c-max<=p<c-mean\par
+\\end\{equation\}\par
+\\myequations\{ Triangular fuzzy set1\}\par
+\\begin\{equation\}\par
+    B_p=1-(|p-c+mean|)/(mean-min), if c-mean<=p<c-min\par
+\\end\{equation\}\par
+\\myequations\{ Triangular fuzzy set2\}\par
+\\begin\{equation\}\par
+   B_p=1-(|p-c-mean|)/(max-mean), if c+mean<=p<c+max\par
+\\end\{equation\}\par
+\\myequations\{ Triangular fuzzy set3\}\par
+\\begin\{equation\}\par
+    B_p=1-(|p-c-mean|)/(mean-min), if c+min<=p<c+mean\par
+\\end\{equation\}\par
+\\myequations\{ Triangular fuzzy set4\}\par
+\par
+In the case that p = x, the point would be c = cx . Hence,\par
+the calculated fuzzy set corresponds to Bx. If p = y then\par
+c = cy . Using this value, the defined fuzzy set is B y. Finally,\par
+if p = z implies that c = cz . The resulting fuzzy set is Bz. The\par
+3D fuzzy set Bxyz, which defines the whole sphere, is the result\par
+of applying the product t-norm of the latter three 1D fuzzy sets\par
+B\par
+xyz = Bx \'b7 By \'b7 B z . Its membership function is determined as\par
+\\begin\{equation\}\par
+    \\mu_B=\\mu_B_x . \\mu_B_y . \\mu_B_z\par
+\\end\{equation\}\par
+\\myequations\{ Membership function\}\par
+\\begin\{figure\}[H]\par
+\\centering\par
+\\includegraphics[width=15cm,height=5cm]\{Capture2.PNG\}\par
+\\caption[Facial landmark position from a cranial landmark using a sphere (a) and a cone (b). min, mean, and max are the soft tissue depths. For the\par
+cone, u is the normal vector at the cranial landmark in the skull, \f2\lang1032\'e8 is the rotation angle of u.]\{Facial landmark position from a cranial landmark using a sphere (a) and a cone (b). min, mean, and max are the soft tissue depths. For the\par
+cone, u is the normal vector at the cranial landmark in the skull, \'e8 is the rotation angle of u.\\cite\{MP\}\}\par
+\\label\{Min, Mean, and Max are the soft tissue depths\}\par
+\\end\{figure\}\par
+\\begin\{figure\}[H]\par
+\\centering\par
+\\includegraphics[width=8cm,height=8cm]\{Capture3.PNG\}\par
+\\caption[Facial landmark position from a cranial landmark using a sphere (a)\par
+and a cone (b).]\{Facial landmark position from a cranial landmark using a sphere (a)\par
+and a cone (b).\\cite\{MP\}\}\par
+\\label\{sphere (a) and Cone (b).\}\par
+\\end\{figure\}\par
+\par
+\\section\{Modeling the Landmark Matching Uncertainty\par
+Using Cones\}\par
+The previous approach is a good solution to tackle this\par
+SFO problem of modeling the facial soft tissue thickness\par
+with the available studies. However, it produces inconsistent\par
+anatomical solutions because it does not model the positional\par
+relationships between pairs of landmarks. For example,\par
+facial landmarks located inside the skull are considered to be\par
+correctly positioned.\par
+A variation of the previous method is proposed as follows:\par
+instead of modeling the soft tissue depth using a sphere\par
+with the cranial landmark in the center, a cone is defined\par
+whose vertex is the cranial landmark. Each facial landmark is\par
+supposed to be located inside the cone. Using a cone,\par
+we closely specify a narrower region where the facial landmark\par
+should be located. We refine the search of the facial landmarks\par
+placement to a specific region. It assumes a certain degree of\par
+perpendicularity between cranial and facial landmarks as most\par
+soft tissue studies do.\par
+To do this, it considers the normal vector 2 on the surface of\par
+the skull 3D model at each cranial landmark: v = (xn, yn, zn).\par
+The unit vector of v, which has the same direction,but a magnitude of the unit, has been determined below:\par
+\\begin\{equation\}\par
+    u=(x_n/|v|,y_n/|v|,z_n/|v|)=(u_x,u_y,u_z)\par
+\\end\{equation\}\par
+\\myequations\{ u Unit vector\}\par
+\\begin\{equation\}\par
+    v=\\sqrt\{x^2_n+y^2_n+z^2_n\}\par
+\\end\{equation\}\par
+\\myequations\{ v Unit vector\}\par
+In order to estimate the position of the facial landmarks,\par
+u coordinates (ux, uy, uz ) are multiplied by the specific\par
+distance (min, mean, or max).\par
+Since the correspondence between a pair of cranial-facial\par
+landmarks is not always perpendicular, different inclination\par
+angles are applied to the unit vector \'02u in order to define the\par
+volume in which the facial landmark is likely to be located.\par
+The amplitude of this area can be defined by a rotation equal\par
+to \\begin\{equation\}+ or - \\theta\\end\{equation\} along the three axes X, Y and Z.\par
+The 3D rotation of the unit vector \'02u consists of\par
+three different rotations, i.e., a rotation of an angle \f0\lang1033\'b1\f2\lang1032\'e8 along\par
+the X, Y and Z axes. The expressions for each axis\par
+rotation are the following:\par
+x-axis rotation\par
+\\begin\{equation\}\par
+    x'=u_x\par
+\\end\{equation\}\par
+\\myequations\{ X-axis rotation Component in x\}\par
+\\begin\{equation\}\par
+    y'=u_ycos\\theta-u_zsin\\theta\par
+\\end\{equation\}\par
+\\myequations\{ X-axis rotation Component in y\}\par
+\\begin\{equation\}\par
+    z'=-u_ysin\\theta+u_zcos\\theta\par
+\\end\{equation\}\par
+\\myequations\{ X-axis rotation Component in z\}\par
+y-axis rotation\par
+\\begin\{equation\}\par
+    x'=u_xcos\\theta+u_zsin\\theta\par
+\\end\{equation\}\par
+\\myequations\{ Y-axis rotation Component in x\}\par
+\\begin\{equation\}\par
+    y'=u_y\par
+\\end\{equation\}\par
+\\myequations\{ Y-axis rotation Component in y\}\par
+\\begin\{equation\}\par
+    z'=-u_xsin\\theta+u_zcos\\theta\par
+\\end\{equation\}\par
+\\myequations\{ Y-axis rotation Component in z\}\par
+z-axis rotation\par
+\\begin\{equation\}\par
+    x'=u_xcos\\theta-u_ysin\\theta\par
+\\end\{equation\}\par
+\\myequations\{ Z-axis rotation Component in x\}\par
+\\begin\{equation\}\par
+    y'=u_xsin\\theta+u_ycos\\theta\par
+\\end\{equation\}\par
+\\myequations\{ Z-axis rotation Component in y\}\par
+\\begin\{equation\}\par
+    z'=-u_z\par
+\\end\{equation\}\par
+\\myequations\{ Z-axis rotation Component in z\}\par
+Likewise, a fuzzy set is defined whose center is the\par
+3D cranial landmark with a membership degree of zero. The\par
+rest of the points are calculated by multiplying the coordinates\par
+of the unit vector \'02u by the values of the different distances\par
+min, mean, and max. Thus, a 3D cone is defined where\par
+each facial landmark is expected to be located according to\par
+a particular soft tissue depth study. The\par
+landmark matching uncertainty is defined using 3D masks in\par
+the same fashion as the spheres. Hence, a\par
+fuzzy set \f1\'98B p with p element of \{x, y, z\} is determined by its center c element of \{cx , cy , cz\}\par
+(the 3D coordinates of the cranial landmark), the normal vector coordinates u element of (ux , uy , uz), and the min, mean, and max soft\par
+tissue distances:\par
+\\begin\{equation\}\par
+\\begin\{split\}\par
+\\Bar\{B\}_p & = 1-\\frac\{|p-c-u.mean|\}\{u(mean-min)\},\\  if \\  c+u.min \\leq p \\leq c+u.mean\\\\\par
+& = 1-\\frac\{|p-c-u.mean|\}\{u(max-mean)\},\\  if \\  c+u.mean \\leq p \\leq c+u.max\\\\\par
+& = 0 ,\\  otherwise\par
+\\end\{split\} \par
+\\end\{equation\}\par
+\\myequations\{ Maximum soft tissue distance\}\par
+In the case that p = x, the points would be c = cx and u = ux .\par
+Hence, the calculated fuzzy set corresponds to \'98Bx. If p = y\par
+then c = cy and u = uy. Using these values, the defined fuzzy\par
+set is \'98By. If p = z it implies that c = cz and u = uz , with the\par
+resulting fuzzy set being \'98Bz .\par
+The 3D fuzzy set \'98Bxyz, which defines the whole 3D cone,\par
+is the product t-norm of the previous three, one-dimensional\par
+fuzzy sets \'98B xyz = \'98Bx \f0\lang1033\'b7 \f1\'98By \f0\'b7 \f1\'98Bz . Its membership function is\par
+determined by the product t-norm of the membership functions\par
+of each fuzzy set:\par
+\\begin\{equation\}\par
+    \\mu_B=\\mu_B_x*\\mu_B_y*\\mu_B_z\par
+\\end\{equation\}\par
+\\myequations\{ Membership functions\par
+of each fuzzy set\}\par
+\\begin\{figure\}[H]\par
+\\centering\par
+\\includegraphics[width=6cm,height=5cm]\{Capture4.PNG\}\par
+\\caption[Graphical representation of one of the dimensions of the 3D fuzzy\par
+set B p for modeling the landmark matching uncertainty with a cone. The\par
+other two dimensions are modeled in a homologous way.]\{Graphical representation of one of the dimensions of the 3D fuzzy\par
+set B p for modeling the landmark matching uncertainty with a cone. The\par
+other two dimensions are modeled in a homologous way.\\cite\{MP\}\}\par
+\\label\{Graphical representation of one of the dimensions of the 3D fuzzy\par
+set B p for modeling the landmark matching uncertainty with a cone. The\par
+other two dimensions are modeled in a homologous way.\}\par
+\\end\{figure\}\par
+\par
+\\section\{Distance Between Two Fuzzy Sets and\par
+Fitness Function Definition\}\par
+Our proposal allows experts to mark both precise\par
+and imprecise (fuzzy) facial landmarks. These latter\par
+landmarks can be used by forensic anthropologists as\par
+necessary.\par
+With the modeling of the landmark matching uncertainty\par
+proposed in the previous subsection, the need to compute\par
+the distance between two fuzzy sets arises. One of these\par
+two fuzzy sets is the projection of the 3D cranial landmark\par
+on the facial photograph, which is composed of the precise\par
+3D cranial landmark (called cli in the two previous sections)\par
+and the fuzzy set that models the landmark matching uncertainty.\par
+The other fuzzy set would be the fuzzy facial landmark\par
+of the photograph representing the imprecise position of\par
+a facial landmark. The distance between two fuzzy sets \'98F and \'98G can be stated\par
+by:\par
+\\begin\{equation\}\par
+    d''(F,G)=\\frac\{\\sum_\{k=1\}^\{k=m\}\\sum_\{l=1\}^\{l=n\}(d(F_k,G_l).min[\\alpha_k,\\beta_l])\}\{\\sum_\{k=1\}^\{k=m\}\\sum_\{l=1\}^\{l=n\}min[\\alpha_k,\\beta_l]\}\par
+\\end\{equation\}\par
+\\myequations\{ Distance between 2 sets\}\par
+where \'98Fk is the kth element of the fuzzy set \'98F , \'98G l is the\par
+lth element of the fuzzy set G\'98 , d is the 2D Euclidean distance,\par
+\f2\lang1032\'e1k is the membership value of \f1\'98Fk , \f2\'e2l is the membership value\par
+of \f1\'98Gl , m is the number of elements of the fuzzy set \'98F , and\par
+n is the number of elements of the fuzzy set G\'98 .\par
+Therefore, the fitness function Fuzzy Mean Error (FME) for\par
+the current automatic 3D-2D SFO task has been formulated\par
+by taking into account the latter fuzzy distances:\par
+\\begin\{equation\}\par
+    FME=\\frac\{\\sum_\{i=1\}^\{i=Ncrisp\}(d'(x_i,f(C^i)))+\\sum_\{j=1\}^\{j=Nfuzzy\}(d''(F^j,f(C^i)))\}\{N\}\par
+\\end\{equation\}\par
+\\myequations\{ Fuzzy mean error2\}\par
+where Ncrisp is the number of 2D facial landmarks precisely\par
+located (crisp points), Nfuzzy is the number of 2D facial\par
+landmarks imprecisely located and defined as bi-dimensional\par
+fuzzy sets, N is the total number of landmarks considered\par
+(N = Ncrisp + Nfuzzy), xi corresponds to a 2D facial\par
+landmark defined as a crisp point (xi in F), \'98C i and \'98C j\par
+are fuzzy sets modeling each 3D cranial landmark and the\par
+soft tissue distance to the corresponding 3D facial landmark\par
+i or j; f is the function that determines the 3D-2D perspective\par
+transformation that properly projects every 3D skull point onto\par
+the 2D photograph; f( \'98C i ) and f( \'98C j ) are two fuzzy\par
+sets, corresponding to the result of applying the perspective\par
+transformation f to the 3D volume (either sphere or cone),\par
+which model the landmark matching uncertainty; \'98F j represents\par
+the fuzzy set of points of the imprecise 2D facial\par
+landmark; d\'03\par
+(xi , f ( \'98C i )) is the distance between a point and a\par
+fuzzy set of points, and d\'03\'03\par
+( \'98F j , f ( \'98C j )) is the distance between\par
+two fuzzy sets.\par
+Solving the SFO problem results in an extremely complex\par
+optimization task with a highly multimodal landscape. This\par
+scenario led us to face the problem of considering robust\par
+EAs to search for the optimal values of the 12 registration\par
+transformation parameters, as discussed in.\par
+\\chapter\{Conclusion\}\par
+\\fancyhf\{\}\par
+\\fancyhead[r]\{%\par
+   % We want italics\par
+   \\itshape\par
+   % The chapter number only if it's greater than 0\par
+\\footnotesize\{\\chaptermark\}\par
+   % The chapter title\par
+   \\leftmark\}\par
+\\fancyfoot[LE,LO]\{\\footnotesize\{Govt. Model Engineering College\}\}\par
+\\fancyfoot[RE,RO]\{\\footnotesize\\thepage\}\par
+The SFO process is a repetitive and tedious task in CFS.\par
+It requires several hours to overlay a skull on a facial\par
+photograph. The design of unbiased, systematic, automatic and quantifiable methods to perform SFO is a real need in forensic\par
+anthropology. So if this method is implemented, then we will get an easy, fast and efficient method for identification in forensics.\par
+\\pagebreak\par
+\\addcontentsline\{toc\}\{chapter\}\{Bibliography\}\par
+\\begin\{thebibliography\}\{14\}\par
+\\bibitem\{MP\}Modeling Facial Soft Tissue Thickness\par
+for Automatic Skull-Face Overlay,IEEE TRANSACTIONS ON INFORMATION FORENSICS AND SECURITY, VOL. 10\par
+\par
+\\bibitem\{KRB\} K. R. Burns, Forensic Anthropology Training Manual, 3rd ed.\par
+Upper Saddle River, NJ, USA: Pearson Education \par
+\par
+\\bibitem\{MY\} M. Yoshino, \ldblquote Craniofacial superimposition,\rdblquote  in Craniofacial Identification,\par
+C. Wilkinson and C. Rynn, Eds. Cambridge, U.K.:\par
+Cambridge Univ. Press\par
+\par
+\\bibitem\{CNS\} C. N. Stephan, \ldblquote Craniofacial identification: Techniques of facial approximation\par
+and craniofacial superimposition,\rdblquote  in Handbook of Forensic\par
+Anthropology and Archaeology, vol. 25, S. Blau and D. Ubelaker, Eds.\par
+Walnut Creek, CA, USA: Left Coast Press\par
+\par
+\par
+\\end\{thebibliography\}\par
+\\end\{document\}\f0\lang9\par
+}
+ 
